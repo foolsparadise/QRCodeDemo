@@ -305,7 +305,7 @@
     //theLightBtn
     theLightBtn = [UIButton buttonWithType:UIButtonTypeCustom];
  
-    theLightBtn.frame = CGRectMake(self.view.frame.size.width / 2 - 100 / 2, mineQRCode.frame.origin.y + mineQRCode.frame.size.height + 20, 100, introLab.frame.size.height);
+    theLightBtn.frame = CGRectMake(self.view.frame.size.width / 2 - 100 / 2, codeFrame.frame.size.height + 213+yMove, 100, introLab.frame.size.height);
     NSString *lightName = [@"QRCodeScanner.bundle" stringByAppendingPathComponent:@"shoudian_meiliang"];
     NSString *lightonName = [@"QRCodeScanner.bundle" stringByAppendingPathComponent:@"shoudian_liang"];
 
@@ -315,7 +315,7 @@
     [self.view addSubview:theLightBtn];
     [theLightBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerX.mas_equalTo(weakSelf.view.mas_centerX).mas_offset(0);
-        make.top.mas_equalTo(weakSelf.view.mas_top).mas_offset(mineQRCode.frame.origin.y + mineQRCode.frame.size.height + 20);
+        make.top.mas_equalTo(weakSelf.view.mas_top).mas_offset(codeFrame.frame.size.height + 213+yMove);
         make.size.mas_equalTo(CGSizeMake(36, 36));
     }];
     
